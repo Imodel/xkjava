@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: xk_zuul
+server:
+  port: 8768 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+
+zuul:
+  routes:
+    api-contract: # 其中api-contract是路由名称，可以随便定义，但是path和service-id需要一一对应
+      path: /hello/**
+      service-id: hello # hello为注册到Eureka上的服务名
+ribbon:
+  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule # 配置服务端负载均衡策略 

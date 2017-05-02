@@ -1,0 +1,9 @@
+zuul:
+  routes:
+    myrouter1:
+      path: /hello/**
+      url: http://www.bing.com.cn
+    
+ribbon:
+  eureka:
+    enabled: false

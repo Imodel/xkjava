@@ -1,0 +1,4 @@
+zuul.routes.myrouter1.path=/hello/**
+zuul.routes.myrouter1.url=http://www.bing.com.cn
+    
+ribbon.eureka.enabled=false
